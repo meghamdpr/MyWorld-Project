@@ -17,4 +17,11 @@ export class WorldchildrenComponent implements OnInit {
      this.worldservice.getContinents()
       .subscribe((data) =>this.continents=data)
   }
+  
+   getcountriesdata(item:string){
+    this.link=item;
+    console.log("entered into countries");
+    console.log(this.link);
+    this.worldservice.getcountries(this.link).subscribe(data=>this.countries=data);
+  }
 }
