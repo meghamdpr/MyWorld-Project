@@ -7,14 +7,17 @@ import { Icontinent } from 'src/continent';
   providedIn: 'root'
 })
 export class ContinentserviceService {
-
-  constructor(private http:HttpClient) { }
+springEndpoint: string | undefined;
+  
+  constructor(private http:HttpClient) {
+    this.springEndpoint='http://localhost:8080/api/v1/getbyplace/';
+   }
 
   getContinents(){
     return this.http.get("http://localhost:8080/api/v1/getbyplace/World");
   }
 
-  getcountries(){
-    return this.http.get("http://localhost:8080/api/v1/getbyplace/{{link}}")
+  getcountries(link:string){
+    return this.http.get(`${this.springEndpoint}/${link}`);
   }
 }
