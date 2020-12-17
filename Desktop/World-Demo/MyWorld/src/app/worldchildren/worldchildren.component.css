@@ -2,68 +2,33 @@
     color: yellow;
     background-image: url("worldchildren.jpg");
     background-size: cover;
-    height: auto;
+    height:auto;
     text-align: center;
     font-size: large;
     font-family: 'Courier New', Courier, monospace;
 }
 
-/* .mat-card-content{
-   display: inline-block;
-   margin-left: 10px;
-} */
-
-/* .content { 
-    padding-left:10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-  } */
-
-
-
-
-/* .mat-elevation-z4:hover{
-      transform: scale(1.4);
-      background-color: rgb(14, 164, 184);
-  }
-
-.mat-elevation-z4{
-    margin:40px;
-    display: inline-block;
-    margin-left: 10px;
-}
-  
-.content > mat-card { 
-    width: 50px; 
-    margin:0px,10px;
-}
-
-.container-fluid{
-    background-color:rgb(14, 164, 184);
-} */
-/* .section{
-    background-color:blue; */
-
 .container{
-    width: 90%;
+    width: 100%;
+    height: auto;
     padding: 10px;
-    background-color: #ddd;
-    margin: 100px auto;
+    background:rgba(255, 255, 0, 0.274);
+    /* margin: 100px auto; */
     display:flex;
+    flex-direction:row;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .box{
-    width: auto;
-    height: auto;
-    background-color: white;
-    margin: 0px 10px;
-    color:red;
+    width:102px;
+    height: 100px;
+    background:rgba(0, 0, 0, 0.5);
+    margin: 20px;
+    box-sizing: border-box;
+    font-size:18px;
+    font-weight: bold;
+    color:rgb(255, 238, 0);
 }
 
 .box:hover{
@@ -71,4 +36,92 @@
     background-color:black;
     box-shadow: 2px 2px 2px #000;
     z-index: 2;
+}
+
+/* add responsive media quaries */
+@media screen and (max-width:1200px){
+    .box{
+        font-size:10px;
+        width:50px;
+        height: 50px;
+
+    }
+}
+
+@media screen and (max-width:600px){
+    .box{
+        width:40%;
+        font-size:8px;
+    }
+
+    .worldclass{
+        background-color: black;
+    }
+}
+
+@media screen and (max-width:300px){
+    .box{
+        width: 40%;
+        font-size:5px;
+    }
+
+    .worldclass{
+        background-color: black;
+    }
+}
+
+.continent .container{
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background:rgba(255, 255, 0, 0.274);
+    /* margin: 100px auto; */
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.continent .box{
+    width:auto;
+    height: auto;
+    background:rgba(0, 0, 0, 0.5);
+    margin: 20px;
+    box-sizing: border-box;
+    font-size:18px;
+    font-weight: bold;
+    color:rgb(255, 238, 0);
+}
+
+
+
+/* add responsive media quaries */
+@media screen and (max-width:1200px){
+    .continent .box{
+        font-size:10px;
+        width:auto;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:600px){
+    .continent .box{
+        width:auto;
+        font-size:8px;
+    }
+
+    .worldclass{
+        background-color: black;
+    }
+}
+
+@media screen and (max-width:300px){
+    .continent .box{
+        width: auto;
+        font-size:5px;
+    }
+
+    .worldclass{
+        background-color: black;
+    }
 }
